@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - School RMS</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <img src="logo.png" class="logo">
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div><div></div><div></div>
+        </div>
+
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="results.html">Result</a></li>
+                <li><a href="student-login.html">Login</a></li>
+                
+                <li><a href="admin-login.html">Admin Login</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- ABOUT CONTENT -->
+    <div class="content">
+        <div class="hero-card">
+
+            <h1>About School RMS</h1>
+
+            <p>
+                School Result Management System (RMS) is a web application designed
+                to manage and display student results efficiently.
+            </p>
+
+            <h2>Features</h2>
+            <p>✔ Student Login</p>
+            <p>✔ Admin Dashboard</p>
+            <p>✔ Responsive Design</p>
+
+            <h2>Developer</h2>
+            <p><b>Name:</b> Hassan Shahid</p>
+
+            <!-- Developer Card -->
+            <div class="img-box">
+                <img src="hassan.jpg" class="developer-pic" id="devImg">
+               </div>
+
+                <h3>Hassan Shahid</h3>
+                <p>Creator & Developer</p>
+
+                <div class="developer-info" id="devInfo">
+                    <p><b>Tech:</b> HTML, CSS, JS</p>
+                    <p><b>Project:</b> School RMS</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© 2026 School RMS</p>
+    </div>
+
+</div>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+function toggleDeveloper(){
+    document.getElementById("devInfo").classList.toggle("active");
+    document.querySelector(".img-box").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

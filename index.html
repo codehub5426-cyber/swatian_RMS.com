@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School RMS - Home</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <img src="logo.png" class="logo">
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div><div></div><div></div>
+        </div>
+
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="results.html">Result</a></li>
+                <li><a href="student-login.html">Login</a></li>
+                <li><a href="admin-login.html">Admin Login</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- HERO -->
+    <div class="content">
+        
+        <div class="hero-card">
+            <h1 class="typing">Welcome to School RMS</h1>
+            <p>Check results easily online</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="annoucement">
+            <h2>Announcement</h2>
+            <p>Results for 2026 are out now!</p>
+
+        </div>
+        <div class="card">
+            <i class="fa fa-bell"></i>
+            <h3>New Results</h3>
+            <p>Check your results by logging in</p>
+        </div>
+        <div class="card">
+            <class="stats-section">
+                <h2>Statistics</h2>
+                <p>Total Students: 500</p>
+                <p>Pass Percentage: 85%</p>
+                <div class="card">
+                    <i class="fa fa-chart-bar"></i>
+                    <h3>Performance</h3>
+                    <p>Overall performance is improving</p>
+                    <div class="card">
+                        <i class="fa fa-users"></i>
+                        <h3>Student Count</h3>
+                        <p>500 students enrolled</p>
+                        <div class="card">
+                            <i class="fa fa-trophy"></i>
+                            <h3>Top Performer</h3>
+                            <p>Congratulations to our top student!</p>
+                            <dialog id="topStudentDialog">
+                                <h3>Top Student Details</h3>
+                                <p>Name: John Doe</p>
+                                <p>Roll Number: 12345</p>
+                                <p>Marks: 98%</p>
+                                <button onclick="document.getElementById('topStudentDialog').close()">Close</button>
+                            </dialog>
+                            <button onclick="document.getElementById('topStudentDialog').showModal()">View
+                                Top Student</button>
+                                <div class="card">
+                                    <i class="fa fa-calendar"></i>
+                                    <h3>Upcoming Events</h3>
+                                    <p>Annual day on 15th December</p>
+                                    <div class="card">
+                                        class=<background-anima>
+                                            <i class="fa fa-bell">
+
+                                            </i>
+                                        </background-anima>
+                                    </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© 2026 School RMS</p>
+    </div>
+
+</div>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+    document.querySelector(".hamburger").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

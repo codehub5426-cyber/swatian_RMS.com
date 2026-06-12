@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result - School RMS</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <img src="logo.png" class="logo">
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div><div></div><div></div>
+        </div>
+
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="results.html" class="active">Result</a></li>
+                <li><a href="student-login.html">Login</a></li>
+                
+                <li><a href="admin-login.html">Admin Login</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- RESULT SECTION -->
+    <div class="content">
+
+        <div class="result-card">
+
+            <h1>Student Result</h1>
+
+            <p><b>Name:</b> Ali Khan</p>
+            <p><b>Roll No:</b> 101</p>
+            <p><b>Class:</b> 10th</p>
+
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                </tr>
+
+                <tr>
+                    <td>English</td>
+                    <td>85</td>
+                </tr>
+
+                <tr>
+                    <td>Math</td>
+                    <td>90</td>
+                </tr>
+
+                <tr>
+                    <td>Computer</td>
+                    <td>95</td>
+                </tr>
+            </table>
+
+            <p><b>Total:</b> 270 / 300</p>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© 2026 School RMS</p>
+    </div>
+
+</div>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

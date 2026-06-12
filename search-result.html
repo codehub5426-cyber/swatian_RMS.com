@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Search Result</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+
+    <div class="content">
+
+        <div class="login-card">
+
+            <h1>Search Result</h1>
+
+            <input type="text" id="roll" placeholder="Enter Roll Number"><br><br>
+            <input type="text" id="class" placeholder="Enter Class"><br><br>
+
+            <button onclick="searchResult()">Search</button>
+
+            <div id="output"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function searchResult(){
+
+    let roll = document.getElementById("roll").value;
+    let cls = document.getElementById("class").value;
+
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    let found = students.find(s => s.roll == roll && s.cls == cls);
+
+    let output = document.getElementById("output");
+
+    if(found){
+        output.innerHTML = `
+            <h3>Result Found</h3>
+            <p>Name: ${found.name}</p>
+            <p>Roll: ${found.roll}</p>
+            <p>Class: ${found.cls}</p>
+            <p>Marks: ${found.marks}</p>
+        `;
+    } else {
+        output.innerHTML = "<p style='color:red;'>No Result Found</p>";
+    }
+}
+</script>
+
+</body>
+</html>

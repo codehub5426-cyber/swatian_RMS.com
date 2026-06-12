@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - School RMS</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ADMIN PROTECTION -->
+<script>
+if(localStorage.getItem("adminLoggedIn") !== "true"){
+    window.location.href = "admin-login.html";
+}
+</script>
+
+<div class="main">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <img src="logo.png" class="logo">
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="results.html">Result</a></li>
+                <li><a href="student-login.html">Login</a></li>
+                <li><a href="admin.html" class="active">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- DASHBOARD CONTENT -->
+    <div class="content">
+
+        <div class="hero-card">
+
+            <h1>Admin Dashboard</h1>
+
+            <p>Manage students and results here</p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <i class="fa fa-user-plus"></i>
+                    <h3>Add Student</h3>
+                    <p>Register new students</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa fa-pen"></i>
+                    <h3>Add Marks</h3>
+                    <p>Upload student results</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa fa-database"></i>
+                    <h3>Manage Data</h3>
+                    <p>Edit or delete records</p>
+                </div>
+
+            </div>
+
+            <br>
+
+            <button class="glow-btn">Login</button>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© 2026 School RMS</p>
+    </div>
+
+</div>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+function logout(){
+    localStorage.removeItem("adminLoggedIn");
+    window.location.href = "admin-login.html";
+}
+</script>
+
+</body>
+</html>
